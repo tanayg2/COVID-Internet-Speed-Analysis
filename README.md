@@ -18,6 +18,8 @@ The goal of this project is to determine whether internet speeds collected durin
 The python program 'DataCollection.py' parses through the csv and calculates the mean, standard deviation, test statistic and p-values. It utilizes the python library scipy to calculate the p-value for a one sample t-test. It reads from the outputted csv file using the pandas library and performs a t-test on the ‘Download’ column of the file.
 
 The sample mean for the data was 16,338,643.06 bits per second (about 16.34 mpbs) and the sample standard deviation was 4,425,383.20 bits per second (about 4.43 mbps). Using the formula t<sub>0</sub>=(x-μ)/√(s<sup>2</sup>/n)  for a one sample t-test, the resulting test statistic was t<sub>0</sub>=-45.80. The p-value generated was 6.96 x 10<sup>-42</sup>. I chose an alpha value of 0.05. Below is the t distribution of the data with the p-value plotted on it. Since the p-value was significantly small, the online graphic utility used to generate this distribution labels the p-value as 0.
+
+![Alt text](TDistribution.png?raw=true "Title")
  
 Because the p-value was significantly less than the significance level of 0.05, we have strong evidence to reject the null hypothesis. Therefore, this test concludes that from data collected throughout a full weekday, there is significant evidence to reject AT&T U-verse’s claim that it provides internet speeds of 45 megabits per second.
 
